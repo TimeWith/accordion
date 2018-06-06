@@ -10,10 +10,9 @@ import {
   ToggleButton,
   LabelParagraph,
   ToggleButtonLabel,
-  toggleIconStyle
+  toggleIconStyle,
+  baseRowHeight
 } from './elements'
-
-const baseRowHeight = 50
 
 class AccordionItem extends Component {
 

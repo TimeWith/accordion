@@ -1,3 +1,8 @@
+import React, { Component } from 'react'
+import glamorous from 'glamorous'
+
+export const baseRowHeight = 50
+
 export const LI = glamorous.li({
   height: `${baseRowHeight}px`,
   borderBottom: '1px solid #d8d8d8',
