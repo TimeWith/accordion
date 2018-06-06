@@ -3,12 +3,25 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.toggleIconStyle = exports.ToggleButtonLabel = exports.LabelParagraph = exports.ToggleButton = exports.ContentDIV = exports.BottomPadding = exports.LI = exports.baseRowHeight = undefined;
 
 var _glamorous$p;
 
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _glamorous2 = require('glamorous');
+
+var _glamorous3 = _interopRequireDefault(_glamorous2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var LI = exports.LI = glamorous.li({
+var baseRowHeight = exports.baseRowHeight = 50;
+
+var LI = exports.LI = _glamorous3.default.li({
   height: baseRowHeight + 'px',
   borderBottom: '1px solid #d8d8d8',
   transition: 'height 0.25s ease-out',
@@ -24,16 +37,16 @@ var LI = exports.LI = glamorous.li({
   }
 });
 
-var BottomPadding = exports.BottomPadding = glamorous.div({
+var BottomPadding = exports.BottomPadding = _glamorous3.default.div({
   height: '20px'
 });
 
-var ContentDIV = exports.ContentDIV = glamorous.div({
+var ContentDIV = exports.ContentDIV = _glamorous3.default.div({
   margin: '0px',
   padding: '0px'
 });
 
-var ToggleButton = exports.ToggleButton = glamorous.div({
+var ToggleButton = exports.ToggleButton = _glamorous3.default.div({
   position: 'absolute',
   top: '0',
   right: '0',
@@ -44,7 +57,7 @@ var ToggleButton = exports.ToggleButton = glamorous.div({
   height: baseRowHeight + 'px'
 });
 
-var LabelParagraph = exports.LabelParagraph = glamorous.p((_glamorous$p = {
+var LabelParagraph = exports.LabelParagraph = _glamorous3.default.p((_glamorous$p = {
   fontFamily: 'proxima-soft',
   fontSize: '18px',
   color: grey_medium,
@@ -64,7 +77,7 @@ var LabelParagraph = exports.LabelParagraph = glamorous.p((_glamorous$p = {
   textOverflow: 'ellipsis'
 }, _defineProperty(_glamorous$p, tablet_max, { width: 'calc(100% - 50px)' }), _defineProperty(_glamorous$p, phone_max, { fontSize: '16px', width: 'calc(100% - 30px)' }), _glamorous$p));
 
-var ToggleButtonLabel = exports.ToggleButtonLabel = glamorous(LabelParagraph)(_defineProperty({
+var ToggleButtonLabel = exports.ToggleButtonLabel = (0, _glamorous3.default)(LabelParagraph)(_defineProperty({
   border: 'none',
   width: 'auto !important'
 }, tablet_max, { display: 'none' }));

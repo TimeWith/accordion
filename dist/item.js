@@ -30,8 +30,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var baseRowHeight = 50;
-
 var AccordionItem = function (_Component) {
   _inherits(AccordionItem, _Component);
 
@@ -45,7 +43,7 @@ var AccordionItem = function (_Component) {
       _this.setState({
         open: isOpen
       });
-      _this.rootElement.style.height = isOpen ? baseRowHeight + _this.contentElement.clientHeight + 'px' : baseRowHeight + 'px';
+      _this.rootElement.style.height = isOpen ? _elements.baseRowHeight + _this.contentElement.clientHeight + 'px' : _elements.baseRowHeight + 'px';
     };
 
     _this.state = {

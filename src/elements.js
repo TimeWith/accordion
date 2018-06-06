@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import glamorous from 'glamorous'
+import { blue, grey_medium } from '@time-with/colors'
 
 export const baseRowHeight = 50
 

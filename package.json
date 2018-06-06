@@ -1,6 +1,6 @@
 {
   "name": "@time-with/accordion",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Timewith Accordion Component",
   "keywords":["timewith","accordion"],
   "main": "dist/index.js",
