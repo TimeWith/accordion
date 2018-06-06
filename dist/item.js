@@ -18,8 +18,6 @@ var _glamorous2 = _interopRequireDefault(_glamorous);
 
 var _colors = require('@time-with/colors');
 
-var _mediaQueries = require('@time-with/media-queries');
-
 var _elements = require('./elements');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

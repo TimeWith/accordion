@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { plusSymbolSVG, minusSymbolSVG } from './symbols';
 import glamorous from 'glamorous';
 import { blue, grey_medium } from '@time-with/colors'
-import { tablet_max, phone_max } from '@time-with/media-queries'
 import {
   LI,
   BottomPadding,

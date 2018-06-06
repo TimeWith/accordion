@@ -15,6 +15,10 @@ var _glamorous2 = require('glamorous');
 
 var _glamorous3 = _interopRequireDefault(_glamorous2);
 
+var _colors = require('@time-with/colors');
+
+var _mediaQueries = require('@time-with/media-queries');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -32,7 +36,7 @@ var LI = exports.LI = _glamorous3.default.li({
   cursor: 'pointer',
   ':hover': {
     '& .highlight-hover': {
-      color: blue
+      color: _colors.blue
     }
   }
 });
@@ -60,7 +64,7 @@ var ToggleButton = exports.ToggleButton = _glamorous3.default.div({
 var LabelParagraph = exports.LabelParagraph = _glamorous3.default.p((_glamorous$p = {
   fontFamily: 'proxima-soft',
   fontSize: '18px',
-  color: grey_medium,
+  color: _colors.grey_medium,
   fontWeight: 'bold',
   display: 'inline-block',
   verticalAlign: 'top',
@@ -75,12 +79,12 @@ var LabelParagraph = exports.LabelParagraph = _glamorous3.default.p((_glamorous$
   whiteSpace: 'nowrap',
   overflow: 'hidden',
   textOverflow: 'ellipsis'
-}, _defineProperty(_glamorous$p, tablet_max, { width: 'calc(100% - 50px)' }), _defineProperty(_glamorous$p, phone_max, { fontSize: '16px', width: 'calc(100% - 30px)' }), _glamorous$p));
+}, _defineProperty(_glamorous$p, _mediaQueries.tablet_max, { width: 'calc(100% - 50px)' }), _defineProperty(_glamorous$p, _mediaQueries.phone_max, { fontSize: '16px', width: 'calc(100% - 30px)' }), _glamorous$p));
 
 var ToggleButtonLabel = exports.ToggleButtonLabel = (0, _glamorous3.default)(LabelParagraph)(_defineProperty({
   border: 'none',
   width: 'auto !important'
-}, tablet_max, { display: 'none' }));
+}, _mediaQueries.tablet_max, { display: 'none' }));
 
 var toggleIconStyle = exports.toggleIconStyle = {
   marginLeft: '20px',

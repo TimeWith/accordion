@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import glamorous from 'glamorous'
 import { blue, grey_medium } from '@time-with/colors'
+import { tablet_max, phone_max } from '@time-with/media-queries'
 
 export const baseRowHeight = 50
 
