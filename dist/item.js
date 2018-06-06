@@ -4,8 +4,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _glamorous$p;
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = require('react');
@@ -14,21 +12,17 @@ var _react2 = _interopRequireDefault(_react);
 
 var _symbols = require('./symbols');
 
-var _glamorous2 = require('glamorous');
+var _glamorous = require('glamorous');
 
-var _glamorous3 = _interopRequireDefault(_glamorous2);
-
-var _item = require('./item');
-
-var _item2 = _interopRequireDefault(_item);
+var _glamorous2 = _interopRequireDefault(_glamorous);
 
 var _colors = require('@time-with/colors');
 
 var _mediaQueries = require('@time-with/media-queries');
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _elements = require('./elements');
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -38,13 +32,13 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var baseRowHeight = 50;
 
-var Accordion = function (_Component) {
-  _inherits(Accordion, _Component);
+var AccordionItem = function (_Component) {
+  _inherits(AccordionItem, _Component);
 
-  function Accordion(props) {
-    _classCallCheck(this, Accordion);
+  function AccordionItem(props) {
+    _classCallCheck(this, AccordionItem);
 
-    var _this = _possibleConstructorReturn(this, (Accordion.__proto__ || Object.getPrototypeOf(Accordion)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (AccordionItem.__proto__ || Object.getPrototypeOf(AccordionItem)).call(this, props));
 
     _this.handleElementClick = function (e) {
       var isOpen = !_this.state.open;
@@ -60,7 +54,7 @@ var Accordion = function (_Component) {
     return _this;
   }
 
-  _createClass(Accordion, [{
+  _createClass(AccordionItem, [{
     key: 'render',
     value: function render() {
       var _this2 = this;
@@ -70,10 +64,20 @@ var Accordion = function (_Component) {
           id = _props.id,
           title = _props.title,
           html = _props.html;
+      var _props2 = this.props,
+          activeLabel = _props2.activeLabel,
+          inactiveLabel = _props2.inactiveLabel;
 
+
+      if (!activeLabel) {
+        activeLabel = 'close';
+      }
+      if (!inactiveLabel) {
+        inactiveLabel = 'open';
+      }
 
       return _react2.default.createElement(
-        LI,
+        _elements.LI,
         {
           innerRef: function innerRef(c) {
             return _this2.rootElement = c;
@@ -82,108 +86,38 @@ var Accordion = function (_Component) {
           onClick: this.handleElementClick,
           key: id },
         _react2.default.createElement(
-          LabelParagraph,
+          _elements.LabelParagraph,
           { innerRef: function innerRef(c) {
               return _this2.labelElement = c;
             }, className: 'highlight-hover' },
           title
         ),
         _react2.default.createElement(
-          ToggleButton,
+          _elements.ToggleButton,
           null,
           _react2.default.createElement(
-            ToggleButtonLabel,
+            _elements.ToggleButtonLabel,
             { className: 'highlight-hover' },
-            open ? 'read less' : 'read more'
+            open ? activeLabel : inactiveLabel
           ),
-          open ? _react2.default.cloneElement(_symbols.minusSymbolSVG, { className: 'highlight-hover', style: toggleIconStyle }) : _react2.default.cloneElement(_symbols.plusSymbolSVG, { className: 'highlight-hover', style: toggleIconStyle })
+          open ? _react2.default.cloneElement(_symbols.minusSymbolSVG, { className: 'highlight-hover', style: _elements.toggleIconStyle }) : _react2.default.cloneElement(_symbols.plusSymbolSVG, { className: 'highlight-hover', style: _elements.toggleIconStyle })
         ),
         _react2.default.createElement(
-          ContentDIV,
+          _elements.ContentDIV,
           {
             className: 'item-content',
             innerRef: function innerRef(c) {
               return _this2.contentElement = c;
             } },
           html,
-          _react2.default.createElement(BottomPadding, null)
+          _react2.default.createElement(_elements.BottomPadding, null)
         )
       );
     }
   }]);
 
-  return Accordion;
+  return AccordionItem;
 }(_react.Component);
 
 exports.default = Accordion;
-
-
-var LI = _glamorous3.default.li({
-  height: baseRowHeight + 'px',
-  borderBottom: '1px solid #d8d8d8',
-  transition: 'height 0.25s ease-out',
-  padding: '0',
-  margin: '0',
-  position: 'relative',
-  overflow: 'hidden',
-  cursor: 'pointer',
-  ':hover': {
-    '& .highlight-hover': {
-      color: _colors.blue
-    }
-  }
-});
-
-var BottomPadding = _glamorous3.default.div({
-  height: '20px'
-});
-
-var ContentDIV = _glamorous3.default.div({
-  margin: '0px',
-  padding: '0px'
-});
-
-var ToggleButton = _glamorous3.default.div({
-  position: 'absolute',
-  top: '0',
-  right: '0',
-  WebkitUserSelect: 'none',
-  MozUserSelect: 'none',
-  MsUserSelect: 'none',
-  userSelect: 'none',
-  height: baseRowHeight + 'px'
-});
-
-var LabelParagraph = _glamorous3.default.p((_glamorous$p = {
-  fontFamily: 'proxima-soft',
-  fontSize: '18px',
-  color: _colors.grey_medium,
-  fontWeight: 'bold',
-  display: 'inline-block',
-  verticalAlign: 'top',
-  height: baseRowHeight + 'px',
-  lineHeight: baseRowHeight - 5 + 'px',
-  margin: '0',
-  padding: '0',
-  ':last-child': {
-    border: 'none'
-  },
-  width: 'calc(100% - 140px)',
-  whiteSpace: 'nowrap',
-  overflow: 'hidden',
-  textOverflow: 'ellipsis'
-}, _defineProperty(_glamorous$p, _mediaQueries.tablet_max, { width: 'calc(100% - 50px)' }), _defineProperty(_glamorous$p, _mediaQueries.phone_max, { fontSize: '16px', width: 'calc(100% - 30px)' }), _glamorous$p));
-
-var ToggleButtonLabel = (0, _glamorous3.default)(LabelParagraph)(_defineProperty({
-  border: 'none',
-  width: 'auto !important'
-}, _mediaQueries.tablet_max, { display: 'none' }));
-
-var toggleIconStyle = {
-  marginLeft: '20px',
-  position: 'relative',
-  display: 'inline-block',
-  verticalAlign: 'top',
-  top: '15px'
-};
 //# sourceMappingURL=item.js.map
