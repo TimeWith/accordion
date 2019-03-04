@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import glamorous from 'glamorous';
 import AccordionItem from './item';
 
 class Accordion extends Component {

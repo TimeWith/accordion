@@ -12,10 +12,6 @@ var _react2 = _interopRequireDefault(_react);
 
 var _symbols = require('./symbols');
 
-var _glamorous = require('glamorous');
-
-var _glamorous2 = _interopRequireDefault(_glamorous);
-
 var _colors = require('@time-with/colors');
 
 var _elements = require('./elements');

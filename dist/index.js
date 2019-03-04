@@ -10,10 +10,6 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _glamorous = require('glamorous');
-
-var _glamorous2 = _interopRequireDefault(_glamorous);
-
 var _item = require('./item');
 
 var _item2 = _interopRequireDefault(_item);

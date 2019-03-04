@@ -5,15 +5,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.toggleIconStyle = exports.ToggleButtonLabel = exports.LabelParagraph = exports.ToggleButton = exports.ContentDIV = exports.BottomPadding = exports.LI = exports.baseRowHeight = undefined;
 
-var _glamorous$p;
+var _styled$p;
 
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _glamorous2 = require('glamorous');
+var _reactEmotion = require('react-emotion');
 
-var _glamorous3 = _interopRequireDefault(_glamorous2);
+var _reactEmotion2 = _interopRequireDefault(_reactEmotion);
 
 var _colors = require('@time-with/colors');
 
@@ -25,7 +25,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var baseRowHeight = exports.baseRowHeight = 50;
 
-var LI = exports.LI = _glamorous3.default.li({
+var LI = exports.LI = _reactEmotion2.default.li({
   height: baseRowHeight + 'px',
   borderBottom: '1px solid #d8d8d8',
   transition: 'height 0.25s ease-out',
@@ -41,16 +41,16 @@ var LI = exports.LI = _glamorous3.default.li({
   }
 });
 
-var BottomPadding = exports.BottomPadding = _glamorous3.default.div({
+var BottomPadding = exports.BottomPadding = _reactEmotion2.default.div({
   height: '20px'
 });
 
-var ContentDIV = exports.ContentDIV = _glamorous3.default.div({
+var ContentDIV = exports.ContentDIV = _reactEmotion2.default.div({
   margin: '0px',
   padding: '0px'
 });
 
-var ToggleButton = exports.ToggleButton = _glamorous3.default.div({
+var ToggleButton = exports.ToggleButton = _reactEmotion2.default.div({
   position: 'absolute',
   top: '0',
   right: '0',
@@ -61,7 +61,7 @@ var ToggleButton = exports.ToggleButton = _glamorous3.default.div({
   height: baseRowHeight + 'px'
 });
 
-var LabelParagraph = exports.LabelParagraph = _glamorous3.default.p((_glamorous$p = {
+var LabelParagraph = exports.LabelParagraph = _reactEmotion2.default.p((_styled$p = {
   fontFamily: 'proxima-soft',
   fontSize: '18px',
   color: _colors.grey_medium,
@@ -79,9 +79,9 @@ var LabelParagraph = exports.LabelParagraph = _glamorous3.default.p((_glamorous$
   whiteSpace: 'nowrap',
   overflow: 'hidden',
   textOverflow: 'ellipsis'
-}, _defineProperty(_glamorous$p, _mediaQueries.tablet_max, { width: 'calc(100% - 50px)' }), _defineProperty(_glamorous$p, _mediaQueries.phone_max, { fontSize: '16px', width: 'calc(100% - 30px)' }), _glamorous$p));
+}, _defineProperty(_styled$p, _mediaQueries.tablet_max, { width: 'calc(100% - 50px)' }), _defineProperty(_styled$p, _mediaQueries.phone_max, { fontSize: '16px', width: 'calc(100% - 30px)' }), _styled$p));
 
-var ToggleButtonLabel = exports.ToggleButtonLabel = (0, _glamorous3.default)(LabelParagraph)(_defineProperty({
+var ToggleButtonLabel = exports.ToggleButtonLabel = (0, _reactEmotion2.default)(LabelParagraph)(_defineProperty({
   border: 'none',
   width: 'auto !important'
 }, _mediaQueries.tablet_max, { display: 'none' }));
