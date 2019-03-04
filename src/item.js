@@ -72,6 +72,6 @@ class AccordionItem extends Component {
   }
 }
 
-export default Accordion;
+export default AccordionItem;
 
 
