@@ -1,6 +1,6 @@
 {
   "name": "@time-with/accordion",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Timewith Accordion Component",
   "keywords":["timewith","accordion"],
   "main": "dist/index.js",
@@ -15,10 +15,9 @@
     "prepack": "yarn && babel src --out-dir dist --source-maps --presets es2015,stage-0,react && rm -rf node_modules",
     "postpack": "rm -rf node_modules"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@emotion/core": "^10.0.7",
     "@emotion/styled": "^10.0.7",
-    "react-emotion": "^10.0.0",
     "@time-with/colors": "^1.0.6"
   },
   "devDependencies": {

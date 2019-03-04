@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import { blue, grey_medium } from '@time-with/colors'
 import { tablet_max, phone_max } from '@time-with/media-queries'
 

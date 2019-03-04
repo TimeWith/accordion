@@ -16,42 +16,9 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
-"@emotion/cache@^10.0.7":
-  version "10.0.7"
-  resolved "https://registry.npmjs.org/@emotion/cache/-/cache-10.0.7.tgz#6221de2e939f62022c04b4df2c165ce577809f23"
-  dependencies:
-    "@emotion/sheet" "0.9.2"
-    "@emotion/stylis" "0.8.3"
-    "@emotion/utils" "0.11.1"
-    "@emotion/weak-memoize" "0.2.2"
-
-"@emotion/core@^10.0.7":
-  version "10.0.7"
-  resolved "https://registry.npmjs.org/@emotion/core/-/core-10.0.7.tgz#a894324b944cb06dcd36813afe35f07b0ed8d20d"
-  dependencies:
-    "@emotion/cache" "^10.0.7"
-    "@emotion/css" "^10.0.7"
-    "@emotion/serialize" "^0.11.4"
-    "@emotion/sheet" "0.9.2"
-    "@emotion/utils" "0.11.1"
-
-"@emotion/css@^10.0.7":
-  version "10.0.7"
-  resolved "https://registry.npmjs.org/@emotion/css/-/css-10.0.7.tgz#fbee607e07aeea444b147719b6472612fff9199b"
-  dependencies:
-    "@emotion/serialize" "^0.11.4"
-    "@emotion/utils" "0.11.1"
-    babel-plugin-emotion "^10.0.7"
-
 "@emotion/hash@0.7.1":
   version "0.7.1"
   resolved "https://registry.npmjs.org/@emotion/hash/-/hash-0.7.1.tgz#9833722341379fb7d67f06a4b00ab3c37913da53"
-
-"@emotion/is-prop-valid@0.7.3":
-  version "0.7.3"
-  resolved "https://registry.npmjs.org/@emotion/is-prop-valid/-/is-prop-valid-0.7.3.tgz#a6bf4fa5387cbba59d44e698a4680f481a8da6cc"
-  dependencies:
-    "@emotion/memoize" "0.7.1"
 
 "@emotion/memoize@0.7.1":
   version "0.7.1"
@@ -67,30 +34,6 @@
     "@emotion/utils" "0.11.1"
     csstype "^2.5.7"
 
-"@emotion/sheet@0.9.2":
-  version "0.9.2"
-  resolved "https://registry.npmjs.org/@emotion/sheet/-/sheet-0.9.2.tgz#74e5c6b5e489a1ba30ab246ab5eedd96916487c4"
-
-"@emotion/styled-base@^10.0.7":
-  version "10.0.7"
-  resolved "https://registry.npmjs.org/@emotion/styled-base/-/styled-base-10.0.7.tgz#87cee1043ffdf17690bdd96d7269a21f705bf224"
-  dependencies:
-    "@emotion/is-prop-valid" "0.7.3"
-    "@emotion/serialize" "^0.11.4"
-    "@emotion/utils" "0.11.1"
-    object-assign "^4.1.1"
-
-"@emotion/styled@^10.0.7":
-  version "10.0.7"
-  resolved "https://registry.npmjs.org/@emotion/styled/-/styled-10.0.7.tgz#e36c84bf14435127481a1ea0b038d64a15c13995"
-  dependencies:
-    "@emotion/styled-base" "^10.0.7"
-    babel-plugin-emotion "^10.0.7"
-
-"@emotion/stylis@0.8.3":
-  version "0.8.3"
-  resolved "https://registry.npmjs.org/@emotion/stylis/-/stylis-0.8.3.tgz#3ca7e9bcb31b3cb4afbaeb66156d86ee85e23246"
-
 "@emotion/unitless@0.7.3":
   version "0.7.3"
   resolved "https://registry.npmjs.org/@emotion/unitless/-/unitless-0.7.3.tgz#6310a047f12d21a1036fb031317219892440416f"
@@ -98,14 +41,6 @@
 "@emotion/utils@0.11.1":
   version "0.11.1"
   resolved "https://registry.npmjs.org/@emotion/utils/-/utils-0.11.1.tgz#8529b7412a6eb4b48bdf6e720cc1b8e6e1e17628"
-
-"@emotion/weak-memoize@0.2.2":
-  version "0.2.2"
-  resolved "https://registry.npmjs.org/@emotion/weak-memoize/-/weak-memoize-0.2.2.tgz#63985d3d8b02530e0869962f4da09142ee8e200e"
-
-"@time-with/colors@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.npmjs.org/@time-with/colors/-/colors-1.0.6.tgz#58a8bc713b2555756c89f0d00c5f4ee61a339f9e"
 
 ansi-regex@^2.0.0:
   version "2.1.1"
@@ -908,10 +843,6 @@ ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
 
-object-assign@^4.1.1:
-  version "4.1.1"
-  resolved "https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
-
 parse-json@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/parse-json/-/parse-json-4.0.0.tgz#be35f5425be1f7f6c747184f98a788cb99477ee0"
@@ -926,10 +857,6 @@ path-parse@^1.0.6:
 private@^0.1.6:
   version "0.1.8"
   resolved "https://registry.npmjs.org/private/-/private-0.1.8.tgz#2381edb3689f7a53d653190060fcf822d2f368ff"
-
-react-emotion@^10.0.0:
-  version "10.0.0"
-  resolved "https://registry.npmjs.org/react-emotion/-/react-emotion-10.0.0.tgz#03adf5a93f9dc41396401551566adf9668a2418e"
 
 regenerate@^1.2.1:
   version "1.4.0"
