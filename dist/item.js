@@ -111,5 +111,5 @@ var AccordionItem = function (_Component) {
   return AccordionItem;
 }(_react.Component);
 
-exports.default = Accordion;
+exports.default = AccordionItem;
 //# sourceMappingURL=item.js.map
