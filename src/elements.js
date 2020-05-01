@@ -42,7 +42,6 @@ export const ToggleButton = styled.div({
 });
 
 export const LabelParagraph = styled.p({
-  fontFamily: 'proxima-soft',
   fontSize: '18px',
   color: grey_medium,
   fontWeight: 'bold',
